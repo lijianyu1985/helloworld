@@ -35,11 +35,11 @@ server.route([
   }
 ]);
 
-server.register([require("inert")], err => {
+server.register([require("inert")], function(err) {
   if (err) {
     return console.error(err);
   }
-  server.start(e => {
+  server.start(function(e){
     if (e) {
       throw e;
     }
