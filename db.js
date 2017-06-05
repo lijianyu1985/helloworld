@@ -1,4 +1,4 @@
-const pg = require('pg');
+var pg = require('pg');
 
 // create a config to configure both pooling behavior
 // and client options
@@ -17,7 +17,7 @@ var config = {
 //this initializes a connection pool
 //it will keep idle connections open for 30 seconds
 //and set a limit of maximum 10 idle clients
-const pool = new pg.Pool(config);
+var pool = new pg.Pool(config);
 
 pool.on('error', function (err, client) {
   // if an error is encountered by a client while it sits idle in the pool
