@@ -1,9 +1,9 @@
 "use strict";
 
-const Hapi = require("hapi");
-const pool = require("./db.js");
+var Hapi = require("hapi");
+var pool = require("./db.js");
 
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 server.connection({port: 80, host: "0.0.0.0"});
 
 server.route([
