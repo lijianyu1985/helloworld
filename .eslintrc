@@ -1,0 +1,22 @@
+{
+    "parser": "babel-eslint",
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint-config-hapi",
+    "plugins": [
+        "babel",
+        "markdown"
+    ],
+    "rules": {
+        "object-curly-spacing": [
+            2,
+            "never"
+        ],
+        "hapi/hapi-scope-start": [
+            0
+        ]
+    }
+}
