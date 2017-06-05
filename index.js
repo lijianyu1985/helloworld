@@ -46,7 +46,7 @@ server.register([require("inert")], function(err) {
     server
       .connections
       .forEach(function(item){
-        console.log(`Server running at: ${item.info.uri}`);
+        console.log('Server running at: ' + item.info.uri);
       });
   });
 });
