@@ -11,15 +11,15 @@ server.route([
     method: "GET",
     path: "/",
     handler: function (request, reply) {
-      pool
+      /*pool
         .query('insert into access_log (ip, access_datetime) values($1, current_timestamp)', [request.info.remoteAddress], function (err, res) {
           if (err) {
             return console.error('error running query', err);
           }
-        });
+        });*/
       reply.file("index.html");
     }
-  }, {
+  }/*, {
     method: "GET",
     path: "/AccessLogs",
     handler: function (request, reply) {
@@ -32,7 +32,7 @@ server.route([
           }
         });
     }
-  }
+  }*/
 ]);
 
 server.register([require("inert")], function(err) {
