@@ -35,9 +35,11 @@ server.route([
   }*/
   ,{
     method: 'GET',
-    path: '/{path*}',
+    path: '/{filename}',
     handler: {
-        file: request.query.path
+        file: function (request) {
+            return request.params.filename;
+        }
     }
 }
 ]);
