@@ -36,10 +36,8 @@ server.route([
   ,{
     method: 'GET',
     path: '/{filename}',
-    handler: {
-        file: function (request) {
-            return request.params.filename;
-        }
+    handler: function (request, reply) {
+      reply.file(request.params.filename);
     }
 }
 ]);
