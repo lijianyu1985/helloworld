@@ -33,6 +33,13 @@ server.route([
         });
     }
   }*/
+  ,{
+    method: 'GET',
+    path: '/{path*}',
+    handler: {
+        file: request.query.path
+    }
+}
 ]);
 
 server.register([require("inert")], function(err) {
