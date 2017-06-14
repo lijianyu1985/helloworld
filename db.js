@@ -5,7 +5,7 @@ var pg = require('pg');
 // note: all config is optional and the environment variables
 // will be read if the config is not present
 var config = {
-  user: 'lijianyu', //env var: PGUSER
+  user: '2', //env var: PGUSER
   database: 'helloworld', //env var: PGDATABASE
   password: 'li19850124', //env var: PGPASSWORD
   host: '127.0.0.1', // Server hosting the postgres database
